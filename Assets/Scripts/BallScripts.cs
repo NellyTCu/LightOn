@@ -13,4 +13,9 @@ public class BallScripts : MonoBehaviour {
 	void Update () {
 		
 	}
+	void OnCollisionEnter2D(Collision2D coll){
+		if (coll.gameObject.tag == "Square") {
+			Destroy (gameObject);
+		}
+	}
 }
